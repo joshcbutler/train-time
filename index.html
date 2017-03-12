@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Firebase Homework</title>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <center>
+            <h1>Anytime is Train Time</h1>
+            <p>Choo Choo. Chee Chee.</p>
+        </center>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Current Train Schedule</div>
+        <div class="panel-body">
+            <table class="table table-striped">
+                <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency(min)</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                </tr>
+                <tr id="trainDiv">
+                    <td id="train"> </td>
+                    <td id="trainDestination"> </td>
+                    <td id="trainFrequency"> </td>
+                    <td id="nextTrain"> </td>
+                    <td id="minutesAway"> </td>
+                </tr>
+            </table>
+        </div>
+        <div class="panel panel-primary">
+            <div class="panel-heading">Add Train</div>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="trainName">Train Name</label>
+                        <input type="trainName" class="form-control" id="trainName">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input type="destination" class="form-control" id="destination">
+                    </div>
+                    <div class="form-group">
+                        <label for="firstTrain">First Train Time (HH:mm - military time)</label>
+                        <input type="firstTrain" class="form-control" id="firstTrain">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency (min)</label>
+                        <input type="frequency" class="form-control" id="frequency">
+                    </div>
+                    <button id="add-train" type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <footer>
+            © 2017 Joshua Butler
+        </footer>
+        <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+        <script src="assets/javascript/train.js"></script>
+</body>
+
+</html>
