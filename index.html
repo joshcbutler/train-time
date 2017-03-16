@@ -2,22 +2,29 @@
 <html>
 
 <head>
-    <title>Firebase Homework</title>
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>Train Schedule</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Jquery Reference -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <!-- Moment.js Reference -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.0/firebase.js"></script>
 </head>
 
 <body>
-    <div class="jumbotron">
+    <div id="trainHeader" class="shadow jumbotron">
         <center>
-            <h1>Anytime is Train Time</h1>
-            <p>Choo Choo. Chee Chee.</p>
+            <h1>Trains Galore</h1>
+            <p>Coming in hot</p>
         </center>
     </div>
     <div class="panel panel-primary">
         <div class="panel-heading">Current Train Schedule</div>
-        <div class="panel-body">
-            <table class="table table-striped">
+        <table class="table table-striped">
+            <table id="trainTable" class="table table-hover">
                 <tr>
                     <th>Train Name</th>
                     <th>Destination</th>
@@ -25,44 +32,38 @@
                     <th>Next Arrival</th>
                     <th>Minutes Away</th>
                 </tr>
-                <tr id="trainDiv">
-                    <td id="train"> </td>
-                    <td id="trainDestination"> </td>
-                    <td id="trainFrequency"> </td>
-                    <td id="nextTrain"> </td>
-                    <td id="minutesAway"> </td>
-                </tr>
             </table>
-        </div>
+    </div>
+    <div id="trainInput" class="col-lg-4 center">
         <div class="panel panel-primary">
-            <div class="panel-heading">Add Train</div>
+            <div id="header-background" class="panel-heading">
+                <h3 id="heading-text" class="panel-title">Add Train</h3>
+            </div>
             <div class="panel-body">
-                <form>
+                <form role="form">
                     <div class="form-group">
-                        <label for="trainName">Train Name</label>
-                        <input type="trainName" class="form-control" id="trainName">
+                        <label for="name-input">Train Name</label>
+                        <input class="form-control" id="name-input" type="text">
                     </div>
                     <div class="form-group">
-                        <label for="destination">Destination</label>
-                        <input type="destination" class="form-control" id="destination">
+                        <label for="destination-input">Destination</label>
+                        <input class="form-control" id="destination-input" type="text">
                     </div>
                     <div class="form-group">
-                        <label for="firstTrain">First Train Time (HH:mm - military time)</label>
-                        <input type="firstTrain" class="form-control" id="firstTrain">
+                        <label for="start-time-input">First train time (HH:mm - military time)</label>
+                        <input class="form-control" id="start-time-input" type="text">
                     </div>
                     <div class="form-group">
-                        <label for="frequency">Frequency (min)</label>
-                        <input type="frequency" class="form-control" id="frequency">
+                        <label for="frequency-input">Frequency(min)</label>
+                        <input class="form-control" id="frequency-input" type="number">
                     </div>
-                    <button id="add-train" type="submit" class="btn btn-primary">Submit</button>
+                    <button class="btn btn-default" id="add-train" type="submit">Submit</button>
                 </form>
             </div>
         </div>
-        <footer>
-            © 2017 Joshua Butler
-        </footer>
-        <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
-        <script src="assets/javascript/train.js"></script>
+    </div>
+    </div>
+    <script type="text/javascript" src="assets/javascript/train.js"></script>
 </body>
 
 </html>

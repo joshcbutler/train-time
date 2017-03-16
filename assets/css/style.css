@@ -1,10 +1,34 @@
-footer {
-	width: 100%;
-	height: 100px;
-	line-height: 100px;
-	bottom: 0;
-	border-top: solid 1px;
-	border-color: #D3D3D3;
-	text-align: center;
-	overflow:hidden;
+html {
+    background-image: url("../images/circles.png");
 }
+body {
+	background-image: url("../images/circles.png");
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+}
+#trainInput {
+	margin: auto;
+}
+.shadow {
+    -moz-box-shadow: 0 0 30px 5px #999;
+    -webkit-box-shadow: 0 0 30px 5px #999;
+}
+#trainHeader {
+	background-color: #808080;
+	color: #F5F5F5;
+}
+/*footer {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    bottom: 0;
+    border-top: solid 1px;
+    border-color: #D3D3D3;
+    text-align: center;
+    overflow: hidden;
+}
+*/
